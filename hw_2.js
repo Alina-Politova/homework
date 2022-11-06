@@ -1,7 +1,7 @@
 // HOMEWORK_2
 
 // Task_1
-
+{
 let x = 1;
 let y = 2;
 let res1 = "" + x + y;
@@ -16,9 +16,9 @@ console.log(typeof res3);
 let res4 = NaN + x + y;
 console.log(res4);
 console.log(typeof res4);
-
+}
 // Task_2
-
+{
 let number = prompt("Please, enter a number");
 if (number % 2 === 0 && number > 0) {
   console.log(" Your number is paired and positive");
@@ -27,25 +27,25 @@ if (number % 2 === 0 && number > 0) {
 } else {
   console.log("It`s not a number");
 }
-
+}
 // Task_3
-
+{
 const arr = [13, "JS", true, null];
 console.log(arr.length);
 arr[4] = prompt("Enter a value");
 console.log(arr[4]);
 arr.shift();
 console.log(arr);
-
+}
 // Task_4
-
+{
 let cities = ["Rome", "Lviv", "Warsaw"];
 cities = cities.join("*");
 console.log(cities);
-
+}
 // Task_5
-
-let adult = prompt("Are you adult?");
+{
+let adult = prompt("How old are you?");
 if (adult >= 18) {
   alert("Are you an adult!");
 } else if (adult < 18) {
@@ -53,9 +53,9 @@ if (adult >= 18) {
 } else {
   alert("Wrong value!");
 }
-
+}
 // Task_6
-
+{
 let a = prompt("Enter the value of the first side of the triangle");
 let b = prompt("Enter the value of the second side of the triangle");
 let c = prompt("Enter the value of the third side of the triangle");
@@ -76,12 +76,12 @@ if (
 } else {
   console.log("The triangle isn`t rectangular!");
 }
-
+}
 // Task_7
-
+{
 let time = prompt("Tell me, what time is it?");
 
-if (time >= 23 && time <= 5) {
+if ( time <= 5 || time >= 23) {
   alert("Good night!");
 } else if (time > 5 && time <= 11) {
   alert("Good morning!");
@@ -92,7 +92,7 @@ if (time >= 23 && time <= 5) {
 }
 
 switch (true) {
-  case (time >= 23 && time <= 5):
+  case (time <= 5 || time >= 23):
     alert("Good night!");
     break;
   case (time > 5 && time <= 11):
@@ -105,4 +105,4 @@ switch (true) {
     alert("Good evening!");
     break;
 }
-
+}
