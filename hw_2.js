@@ -1,6 +1,7 @@
 // HOMEWORK_2
 
 // Task_1
+
 {
 let x = 1;
 let y = 2;
@@ -17,7 +18,9 @@ let res4 = NaN + x + y;
 console.log(res4);
 console.log(typeof res4);
 }
+
 // Task_2
+
 {
 let number = prompt("Please, enter a number");
 if (number % 2 === 0 && number > 0) {
@@ -28,7 +31,9 @@ if (number % 2 === 0 && number > 0) {
   console.log("It`s not a number");
 }
 }
+
 // Task_3
+
 {
 const arr = [13, "JS", true, null];
 console.log(arr.length);
@@ -37,13 +42,17 @@ console.log(arr[4]);
 arr.shift();
 console.log(arr);
 }
+
 // Task_4
+
 {
 let cities = ["Rome", "Lviv", "Warsaw"];
 cities = cities.join("*");
 console.log(cities);
 }
+
 // Task_5
+
 {
 let adult = prompt("How old are you?");
 if (adult >= 18) {
@@ -54,7 +63,9 @@ if (adult >= 18) {
   alert("Wrong value!");
 }
 }
+
 // Task_6
+
 {
 let a = prompt("Enter the value of the first side of the triangle");
 let b = prompt("Enter the value of the second side of the triangle");
@@ -77,7 +88,9 @@ if (
   console.log("The triangle isn`t rectangular!");
 }
 }
+
 // Task_7
+
 {
 let time = prompt("Tell me, what time is it?");
 

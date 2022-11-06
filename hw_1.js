@@ -71,7 +71,6 @@ alert(`Dear, ${login}, your email is ${email}, your password is ${password}`);
 // Task_8
 
 {
-
 let secInMinute = 60;
 let secInHour = secInMinute * 60;
 let secInday = secInHour * 24;
@@ -86,6 +85,5 @@ console.log(
   secInday,
   secInMonth_30Day,
   secInMonth_31Day,
-  secInMonthFebriary
-);
+  secInMonthFebriary);
 }
