@@ -1,6 +1,6 @@
 // HOMEWORK_3
 
-Task_1;
+// Task_1;
 
 {
   const arr = [2, 3, 4, 5];
