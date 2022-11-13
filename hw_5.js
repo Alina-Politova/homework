@@ -195,3 +195,4 @@
   const figures = [new Triangle(3, 4), new Square(7), new Circle(5)];
   handleFigures(figures);
 }
+ 

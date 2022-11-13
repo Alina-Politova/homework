@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Task_1 -->
+
+    <div id="test">First</div>
+
+    <script>
+      document.getElementById("test").innerHTML = "Last";
+      document.querySelector("#test").innerText = "Last";
+    </script>
+
+    <!-- Task_2 -->
+
+    <img class="image" src="dog.jpg" />
+    <script>
+      document.querySelector(".image").src = "cat.jpg";
+    </script>
+
+    <!-- Task_3 -->
+
+    <h2>Article header</h2>
+    <div id="text">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+    </div>
+    <p>Another text</p>
+    <script>
+      let textDiv = document.querySelectorAll("div#text p");
+      textDiv.forEach((item, index) => {
+        console.log(`Selector text ${index}: ${item.innerText}`);
+      });
+    </script>
+
+    <!-- Task_4 -->
+
+    <ul id="list">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+
+    <script>
+      let first = document.querySelector("#list li:nth-child(1)").innerText;
+      let second = document.querySelector("#list li:nth-child(2)").innerText;
+      let third = document.querySelector("#list li:nth-child(3)").innerText;
+      let fourth = document.querySelector("#list li:nth-child(4)").innerText;
+      let fifth = document.querySelector("#list li:nth-child(5)").innerText;
+      alert(`${first}, ${fifth}, ${second}, ${fourth}, ${third}`);
+    </script>
+
+    <script>
+      let listItems = document.querySelectorAll("ul#list li");
+      alert(
+        `${listItems[0].innerText}, ${listItems[4].innerText}, ${listItems[1].innerText}, ${listItems[3].innerText}, ${listItems[2].innerText}`
+      );
+    </script>
+
+    <!-- Task_5 -->
+
+    <h1>I'am a big header!!!</h1>
+    <div id="myDiv">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+      <p>Fourth paragraph</p>
+    </div>
+    <ul id="myList">
+      <li>Make</li>
+      <li>me</li>
+      <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+
+    <script>
+      document.querySelector("h1").style.backgroundColor = "green";
+      document.querySelector("#myDiv p:nth-child(1)").style.fontWeight = "bold";
+      document.querySelector("#myDiv p:nth-child(2)").style.color = "red";
+      document.querySelector("#myDiv p:nth-child(3)").style.textDecoration =
+        "underline";
+      document.querySelector("#myDiv p:nth-child(4)").style.fontStyle =
+        "italic";
+      document.querySelector("ul#myList").style.display = "flex";
+      document.querySelector("ul#myList").style.listStyle = "none";
+      document.querySelector("span").style.display = "none";
+    </script>
+
+    <!-- Task_6 -->
+
+    <input type="text" id="input1" value="Text1" />
+    <input type="text" id="input2" value="Text2" />
+
+    <script>
+      let result1 = prompt();
+      let result2 = prompt();
+      document.getElementById("input1").value = result1;
+      document.getElementById("input2").value = result2;
+      document.getElementById("input1").value = result2;
+      document.getElementById("input2").value = result1;
+    </script>
+
+    <!-- Task_7 -->
+
+    <script>
+      let block = document.createElement("main");
+      block.className = "mainClass check item";
+      block.innerHTML = '<div id="myDiv"><p>First paragraph</p></div>';
+      document.querySelector("body").append(block);
+    </script>
+  </body>
+</html>
