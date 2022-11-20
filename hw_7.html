@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Task_1 -->
+
+    <script>
+
+let newWindow = window.open('', '', 'width = 300', height = 300);
+setTimeout(function() {
+    newWindow.resizeTo(500, 500);
+}, 2000);
+setTimeout(function() {
+    newWindow.moveTo(200, 200);
+}, 4000);
+setTimeout(function() {
+    newWindow.close();
+}, 6000);
+
+</script>
+
+    <!-- Task_2 -->
+
+    <p id ='text'>I learning JavaScript events!</p> 
+    <div>
+        <button onClick="changeCSS()">Change style!</button>
+    </div>
+    
+    <script>
+        function changeCSS() {
+            text.style.color = 'orange';
+            text.style.fontSize = '20pt';
+            text.style.fontFamily = 'Comic Sans MS';
+        }
+        btn.addEventListener('click', function(event) {
+            event.target.style
+        })
+    </script>
+
+    <!-- Task_3 -->
+
+    <button onclick="setBackground('blue')">
+      Click to make the page blue.
+    </button>
+    <button ondblclick="setBackground('pink')">
+      Double-click to make the page pink.
+    </button>
+    <button
+      onmousedown="setBackground('brown')"
+      onmouseup="setBackground('white')"
+    >
+      Click and hold to make the page brown.
+    </button>
+    <a
+      href="#"
+      onmouseover="setBackground('yellow')"
+      onmouseout="setBackground('white')"
+    >
+      Hover over to make page yellow.</a
+    >
+    <script>
+        function setBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+    <!-- Task_4 -->
+
+    <form>
+        <select id="nameSet">
+            <option>Peter</option>
+            <option>John</option>
+            <option>Alise</option>
+            <option>Alex</option>
+            <option>Iren</option>
+        </select>
+        <input type="button" id="myBtn" value="Choose and Delete">
+    </form>
+
+<script>
+    myBtn.addEventListener('click', deleteColor);
+    function deleteColor() {
+        let color = document.getElementById('nameSet');
+        color.remove(color.selectedIndex);
+    }
+</script>
+
+    <!-- Task_5 -->
+
+    <button id="liveButton">Live Button!</button>
+    <p id="myId"></p>
+
+    <script>
+        let myLiveButton = document.getElementById('liveButton');
+        myLiveButton.addEventListener('mouseover', mouseOverFunction);
+        myLiveButton.addEventListener('click', mouseClickFunction);
+        myLiveButton.addEventListener('mouseout', mouseOutFunction);
+ function mouseOverFunction() {
+    document.getElementById('myId').innerHTML += 'Mouse on me!<br>';
+ }
+ function mouseClickFunction() {
+    document.getElementById('myId').innerHTML += 'I was pressed!<br>';
+ }
+ function mouseOutFunction() {
+    document.getElementById('myId').innerHTML += 'Mouse is not on me!<br>';
+ }
+    </script> 
+
+    <!-- Task_6 -->
+
+    <div id="result"></div>
+<script>
+function showWindowSize() {
+    let sizeOfWidth = window.innerWidth;
+    let sizeOfHeight = window.innerHeight;
+    let size = `Width: ${sizeOfWidth}, Height: ${sizeOfHeight}`;
+    document.getElementById("result").innerHTML = size; 
+}
+window.addEventListener('resize', showWindowSize);
+</script>
+
+    <!-- Task_7 -->
+
+    <select name="country" id="country">
+      <option value="ger">Germany</option>
+      <option value="usa">USA</option>
+      <option value="ukr">Ukraine</option>
+    </select>
+
+    <select name="cities" id="cities"></select>
+    <p></p>
+
+    <script>
+      const myCityArray = {
+        ger: ["Hamburg", "Bavaria", "Stuttgart", "Munich"],
+        usa: ["New-York", "Washington", "Boston", "Chicago"],
+        ukr: ["Kyiv", "Kherson", "Donetsk", "Zaporizhzhia"],
+      };
+      let chooseCountry = document.getElementById("country");
+      chooseCountry.addEventListener("change", createList);
+      chooseCountry.addEventListener("change", toParagraph);
+      let chooseCity = document.getElementById("cities");
+      chooseCity.addEventListener("change", toParagraph);
+
+      function createList() {
+        chooseCity.innerHTML = "";
+        let country = chooseCountry.value;
+        for (let i = 0; i < myCityArray[country].length; i++) {
+          let newOption = document.createElement("option");
+          newOption.innerHTML = myCityArray[country][i];
+          chooseCity.appendChild(newOption);
+        }
+      }
+      let paragraph = document.querySelector("p");
+      function toParagraph() {
+        paragraph.innerHTML = "";
+        paragraph.innerHTML =
+          chooseCountry.options[chooseCountry.selectedIndex].text +
+          ", " +
+          chooseCity.options[chooseCity.selectedIndex].text;
+      }
+      
+    </script>
+  </body>
+</html>
